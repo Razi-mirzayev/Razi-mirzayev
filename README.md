@@ -28,17 +28,23 @@ I specialize in transforming large-scale, complex datasets into actionable busin
 
 ---
 
-### 2. 🎮 [Steam SQL & Excel Analytics](https://github.com/Razi-mirzayev/steam-sql-excel-analytics)
-> **Gaming Market, Pricing & Player Engagement Analysis using SQL, Python, and Excel**
+### 2. 🎮 [Steam Video Games Ecosystem – 3NF SQL, Statistical & Automated Excel BI Analytics](https://github.com/Razi-mirzayev/steam-sql-excel-analytics)
+> **End-to-End 3NF Relational Database, SQL Window Analytics, SciPy Hypothesis Testing & OpenPyXL Automated BI across 22,608 Games**
 
-- Comprehensive analytical pipeline exploring game pricing strategies, genre performance, release trends, and review sentiment across the Steam ecosystem using relational SQL queries, Python data processing, and interactive Excel dashboards.
+- **3NF Relational Database (`steam_games.db`):** Built a Python ETL pipeline normalizing **22,608 Steam games** and **21,221 Wikidata records** into a 6-table **Third Normal Form (3NF)** SQLite database (`games`, `genres` [49], `game_genres` [64,146], `categories` [144], `game_categories` [134,841], `game_metadata` [21,221]).
+- **Advanced SQL & Market Insights:** Executed multi-table `JOIN`, `CTE`, `LAG()`, and `RANK()` queries revealing that **Action (`$59.8B`)**, **Adventure (`$42.7B`)**, and **RPG (`$32.4B`)** lead gross revenue while **Indie (`12,821` paid titles)** dominates catalog volume; benchmarked top publishers (**Valve: `90.2%` positive**, **PlayStation Publishing: `84.8%`**, **Capcom: `83.0%`**) and game engines (**Essence Engine: `84.3` Metacritic**, **id Tech 3: `82.5`**).
+- **Statistical Hypothesis Testing:** Validated pricing and sentiment dynamics across `17,773` established games via **Kruskal-Wallis ($H = 342.23, p < 0.0001$)** across price tiers (showing the `$10–$19.99` tier peaks at **84.31%** median approval vs. **78.40%** for `<$5` titles), **Spearman correlation ($\rho = +0.581$)** between Metacritic and player reviews, and **Mann-Whitney $U$ ($p < 0.0001$)** comparing Paid (**81.21%**) vs. Free-to-Play (**79.77%**) approval.
+- **Automated Excel BI Workbook (`steam_games_dashboard.xlsx`):** Programmatically generated a 7-sheet executive Excel dashboard featuring live `INDEX/MATCH/MAX` KPI cards, conditional formatting, and embedded charts.
 
 ---
 
-### 3. 🔍 [Audit Analytics Toolkit](https://github.com/Razi-mirzayev/audit-analytics-toolkit)
-> **Automated Data Auditing, Anomaly Detection & Risk Assessment in Python**
+### 3. 🛡️ [Audit Analytics Toolkit (CAATs) – ISA-Aligned Financial Audit & Forensic ML](https://github.com/Razi-mirzayev/audit-analytics-toolkit)
+> **Automated Financial Statement Auditing (ISA 240 / 520 / 530), Forensic ML Risk Scoring & P2P Three-Way Match in Python & SQLite**
 
-- Python-based analytical toolkit designed for internal audit workflows, data quality validation, outlier detection, and automated risk profiling on transactional datasets.
+- **ISA 240 Fraud Risk & Benford's Law:** Tested `1,223` General Ledger entries (`$4.89M` total value) via **Benford's Law First-Digit Analysis** ($\chi^2 = 17.623, p = 0.0242, \text{MAD} = 0.00883$), uncovering a **+1.80% excess spike in Leading Digit 9 (`6.38%` vs. `4.58%` expected)** driven by split-invoice structuring (`$9,700–$9,999`) below the `$10,000` approval limit.
+- **Journal Entry Testing (JET) & Unsupervised Forensic ML:** Combined 6 deterministic red-flag rules (`341` weekend postings, `258` manager overrides, `17` period-end cutoffs, `13` near-limit splits) with a **Multivariate & Isolation-Projection Forensic ML Scorer** (`59.17` mean risk score on injected fraud seeds vs. `18.15` on normal entries).
+- **ISA 530 Monetary Unit Sampling (MUS) & P2P Three-Way Match:** Demonstrated that **MUS (`55` sampled items)** audits **41.03% (`$2.01M`)** of total ledger value (**10x higher monetary coverage** than Simple Random Sampling at `4.12%`), and reconciled `150` Purchase Orders against Invoices and Payments, isolating **48 control exceptions (`32.0%`)**.
+- **Automated Audit Deliverables:** Generates an **SQLite Audit Warehouse (`audit_warehouse.db`)**, a **7-sheet Excel Working Paper (`audit_findings_report.xlsx`)**, an executive **PDF Audit Memorandum (`audit_memo.pdf`)**, and an interactive **Streamlit Web App**.
 
 ---
 
